@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sorting Algorithm Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Sorting Algorithm Visualizer</h1>
+        <p>Understand sorting algorithms through interactive animations.</p>
+    </header>
+
+    <main>
+        <section class="controls">
+
+            <label for="algorithm">Choose Algorithm:</label>
+
+            <select id="algorithm">
+                <option value="bubble">Bubble Sort</option>
+                <option value="selection">Selection Sort</option>
+                <option value="insertion">Insertion Sort</option>
+                <option value="merge">Merge Sort</option>
+                <option value="quick">Quick Sort</option>
+            </select>
+
+            <label for="arraySize">Array Size:</label>
+
+            <input
+                type="range"
+                id="arraySize"
+                min="5"
+                max="60"
+                value="25"
+            >
+
+            <button id="generate">Generate Array</button>
+            <button id="sort">Start Sorting</button>
+            <button id="reset">Reset</button>
+
+        </section>
+
+        <section class="custom-input">
+            <label for="customArray">Enter numbers separated by commas:</label>
+
+            <input
+                type="text"
+                id="customArray"
+                placeholder="Example: 45, 12, 30, 8, 25"
+            >
+
+            <button id="applyArray">Use Custom Array</button>
+        </section>
+
+        <section class="legend">
+            <span>Default: Unsorted</span>
+            <span>Comparing: Highlighted</span>
+            <span>Sorted: Completed</span>
+        </section>
+
+        <section id="bars" aria-label="Sorting visualization"></section>
+
+        <section class="statistics" aria-live="polite">
+            <p>Comparisons: <span id="comparisons">0</span></p>
+            <p>Swaps: <span id="swaps">0</span></p>
+            <p>Time: <span id="time">0 ms</span></p>
+            <p>Status: <span id="status">Ready</span></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>DAA Project - Interactive Visualization of Sorting Algorithms</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
